@@ -284,18 +284,43 @@ const cadastroDeProdutos = function(){
 
     //console.log(produtos)
 
+    //extrai o produto
     produtos.forEach(function(itemProduto){
         console.log(`produto: ${itemProduto.nome}`)
 
+        //extrai a cor
         itemProduto.cor.forEach(function(itemCor){
             console.log(`cor: ${itemCor.cor}`)
 
+            //extrai o marca
             itemProduto.marca.forEach(function(itemMarca){
                 console.log(`marca: ${itemMarca}`)
 
             })
         })
     })
+
+    //filtrando produtos pelo nome
+   // console.log('exemplo de como pesquisar um produto pelo nome')
+
+   // let nomeProduto = 'mouse'
+   // produtos.forEach(function(itemProduto){
+     //   if(String(nomeProduto).toUpperCase() == String(itemProduto.nome).toUpperCase()){
+            //console.log(itemProduto)
+      //  }
+    //})
+
+    //filtrando produtos pela cor
+    console.log('exemplo de como pesquisar pela cor do produto')
+    let nomeCor = 'preto'
+    produtos.forEach(function(itemProduto){
+        itemProduto.cor.forEach(function(itemCor){
+            if(String(nomeCor).toUpperCase() == String(itemCor.cor).toUpperCase()){
+                console.log(itemProduto)
+            }
+        })
+    })
+    
     
     
     
